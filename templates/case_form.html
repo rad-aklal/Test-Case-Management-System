@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <title>Test Case</title>
+    <style scoped="">
+        .test {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background: rgb(28, 184, 65);
+            margin-left: 1000px;
+        }
+        .form_level {
+            margin-left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <form class="pure-form">
+            <div class="form_level">
+                <fieldset class="pure-group">
+                    <label for="test_id">Test id</label>
+                    <input type="text" class="pure-input-3-4" placeholder="XXX-001" name="test_id"/>
+                    <br>
+                    <label for="test_title">Title</label>
+                    <input type="text" class="pure-input-3-4" name="title" />
+                    <br>
+                    <label for="test_date">Date</label>
+                    <input type="date" class="pure-input-3-4" name="date_created" />
+                    <br>
+                    <label for="test_person">Tested By</label>
+                    <input type="text" class="pure-input-3-4" name="tested_by" />
+                    <br>
+                    <label for="functionality">Functionality Type</label>
+                    <input type="text" class="pure-input-3-4" name="functionality" />
+                    <br>
+                    <label for="summary">Summary</label>
+                    <input type="text" class="pure-input-3-4" name="summary" />
+                    <br>
+                    <label for="description">Description</label>
+                    <textarea class="pure-input-3-4" name="description"></textarea>
+                    <br>
+                    <label for="steps">Steps</label>
+                    <textarea class="pure-input-3-4" name="steps"></textarea>
+                    <br>
+                    <label for="data">Data</label>
+                    <textarea class="pure-input-3-4" name="data"></textarea>
+                    <br>
+                    <label for="url">url</label>
+                    <input type="text" class="pure-input-3-4" name="url" />
+                    <br>
+                    <label for="expected_res">Expected Result</label>
+                    <textarea class="pure-input-3-4" name="expected_result"></textarea>
+                    <br>
+                    <label for="actual_res">Actual Result</label>
+                    <textarea class="pure-input-3-4" name="actual_result"></textarea>
+                    <br>
+                    <label for="environ">Environment</label>
+                    <input type="text" class="pure-input-3-4" name="environment" />
+                    <br>
+                    <label for="device">Device</label>
+                    <input type="text" class="pure-input-3-4" name="device" />
+                    <br>
+                </fieldset>
+                <button type="submit" class="pure-button pure-button-primary">Add</button>
+                <br>
+                <br>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
