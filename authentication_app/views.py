@@ -5,7 +5,7 @@ from django.contrib.auth.models import User,auth
 
 
 def home(request):
-    return render(request,"case_form.html")
+    return redirect('/register')
 
 
 def register(request):
@@ -17,16 +17,19 @@ def register(request):
         if password1==password2:
             if User.objects.filter(username=username).exists():
                 messages.info(request,"Username is already taken")
-                return redirect('/')
+                return redirect('/register')
             elif User.objects.filter(email=email).exists():
                 messages.info(request,"Email already taken")
-                return redirect('/')
+                return redirect('/register')
+            elif len(password1)<8:
+                messages.info(request,"Must be 8 chars or above")
+                return redirect('/register')
             else:
                 user = User.objects.create_user(username=username,email=email,password=password1)
                 user.save();
         else:
             messages.info(request,"Password doesn't match")
-            return redirect('/')
+            return redirect('/register')
         return redirect('/login')
     else:
         return render(request,'authentication_app/register.html')
@@ -37,4 +40,3 @@ def login(request):
         username
     else:
         return render(request,'authentication_app/login.html')
-
